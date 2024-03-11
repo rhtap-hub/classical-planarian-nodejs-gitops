@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: classical-planarian-nodejs
+  janus-idp.io/tekton: classical-planarian-nodejs
+  backstage.io/kubernetes-id: classical-planarian-nodejs
+  backstage.io/kubernetes-namespace: rhtap-integ 
+  app.kubernetes.io/part-of: classical-planarian-nodejs
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
